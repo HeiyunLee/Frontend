@@ -1,0 +1,180 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_selector(선택자)</title>
+    <style>
+        /*전체 선택자*/
+        *{margin: 0px;} 
+        html,body{text-align: center;}
+        /*태그 선택자*/
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        /*id,class 선택자*/
+        #header{
+            color: blueviolet;
+        }
+        #header>.wrap1{             background-color: aqua;
+        }
+        #header>.wrap1>h2{
+            color: black;
+        }
+        #header>.wrap2{
+            background-color: aquamarine;
+        }
+        #header>.wrap2>h3{
+            color: black;
+        }
+        /*속성 선택자*/
+        #k1>form>input[type="text"]{
+            background-color: aliceblue;
+        }
+        #k1>form>input[type="password"]{
+            background-color: bisque;
+        }
+        #k1>form>input[type="email"]{
+            background-color: burlywood;
+        }
+        #k2>img{
+            width: 200px;
+            height: 250px;
+        }
+        /*문자열 속성 선택자*/ /*$: 문자열 끝 글자*/
+        #k2>img[src$="gif"]{
+            border: 3px solid red;
+        }
+        #k2>img[src$="jpg"]{
+            border: 3px solid blue;
+        }
+        #k2>img[src$="png"]{
+            border: 3px solid black;
+        }
+        /*후손 선택자*/ /*후손: 대대로*/
+        #k3 p{
+            color: red;
+        }
+        /*자식 선택자*/ /*자식: 직계*/
+        #k3>p{
+            border: 1px solid black;
+            padding: 30px; /*padding(박스 안의 여백): 글자와 박스 사이의 간격*/
+            margin: 30px 0px; /*margin(박스 밖의 여백): 상하 좌우*/
+        }
+        /*동위 선택자*/ 
+        #k4>h3+h4{ /*a+b: a바로 뒤에 나오는 b*/
+            color: aqua;
+        }
+        #k4>h5~h4{ /*a~b: a 안에있는 b 모두*/
+            color:chocolate;
+        }
+        /*반응 선택자*/ 
+        #k4>h2:hover{ /*a: hover: 마우스 올려놓으면 색 변함*/
+            background-color: darkgray;
+        }
+        #k4>h3:active{ /*a: active: 마우스 클릭하면 색 변함(순간)*/
+            background-color: cadetblue;
+        }
+        /*상태 선택자*/
+        #k1>form>input:focus{ /*a: focus : 마우스로 클릭하면 색 변함(유지)*/
+            background-color: orange;
+        }
+        /*일반 구조 선택자(:first-child, :nth-child)*/
+        #k5>ul>li:first-child{ /*fitst-child: 첫번째 것*/
+            color: darkorange;
+        }
+        #k5>ul>li:last-child{ /*last-child: 마지막*/
+            color: blue;
+        }
+        #k5>ul>li:nth-child(2n){/*nth-child(2n): 짝수번째, nth-child(2n-1): 홀수번째*/
+            background-color: aqua;
+        }
+        #k5>ul>li:nth-child(5){ /*nth-child(n): n번째*/
+            background-color: brown;
+        }
+        /*형태 구조 선택자*/
+        #k6>h3:first-of-type{ /*a: first-of-type: a 중 처음 찾은 값(여러 개라면 처음 나온 값)*/
+            color: blue;
+        }
+        #k6>h1:last-of-type{ /*a: last-of-type: a 중 마지막에 찾은 값(여러 개라면 마지막에 나온 값)*/
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>id(#),class(.)</h1>
+    <header id="header">
+        <div class="wrap1">
+            <h2>wrap1-1</h2>
+            <h3>wrap1-2</h3>
+        </div>
+        <div class="wrap2">
+            <h2>wrap2-1</h2>
+            <h3>wrap2-2</h3>
+        </div>
+    </header><br><br>
+    <hr>
+    <h1>기본 속성 선택자</h1>
+    <div id="k1">
+        <form>
+            <input type="text" name="name" value="jang"><br>
+            <input type="password" name="pass" value="12123456"><br>
+            <input type="email" name="email" value="id@host"><br>
+        </form>
+    </div><br><br>
+    <hr>
+    <h1>문자열 속성 선택자</h1>
+    <div id="k2">
+        <img src="image/book.gif">
+        <img src="image/book.jpg">
+        <img src="image/book.png">
+    </div><br><br>
+    <hr>
+    <h1>후손/자손 선택자</h1>
+    <div id="k3">
+        <p>과일 상자</p>
+        <div>
+            <p>사과상자</p>
+            <p>배 상자</p>
+        </div>
+        <h3>hello?</h3>
+        <p>hi?</p>
+    </div><br><br>
+    <hr>
+    <h1>동위선택자와 반응 선택자</h1>
+    <div id="k4">
+        <h3>header-sub1</h3>
+        <h4>header-sub2</h4>
+        <h4>header-sub3</h4>
+        <h5>header-sub4</h5>
+        <h2>header-sub5</h2>
+        <h4>header-sub6</h4>
+        <h4>header-sub7</h4>
+    </div><br><br>
+    <hr>
+    <h1>일반 구조 선택자</h1>
+    <div id="k5">
+        <ul>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+            <li>Fourth</li>
+            <li>Fifth</li>
+            <li>Sixth</li>
+            <li>Seventh</li>
+        </ul>
+    </div><br><br>
+    <hr>
+    <h1>형태구조 선택자</h1>
+    <div id="k6">
+        <h1>type1</h1>
+        <h2>type2</h2>
+        <h3>type3</h3>
+        <h3>type4</h3>
+        <h2>type5</h2>
+        <h1>type6</h1>
+    </div>
+
+</body>
+</html>

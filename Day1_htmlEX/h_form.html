@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>form-tagg</title>
+  </head>
+  <body>
+    <h3>자기소개서 작성하기</h3>
+    <hr>
+    <form method="get"><!--주석처리 방-->
+<!-- <form method="get" > 의미 확인 하기-->
+
+      name : <input type="text" name="name" value="honggilding"><br><br>
+      password : <input type="password" name="pwd" value=""><br><br>
+      introduce <br>
+      <textarea rows="10" cols="50" name="me">이곳에 자소서를 입력하세요.</textarea><br>
+      <input type="submit" value="전송하기">
+
+    </form>
+    <hr>
+    <h3>데이터 목록을 가진 텍스트 입력.</h3>
+    <form method="get">
+      나라 : <input type="text" list="country" name="counter"><br>
+            <datalist id="country">
+              <option value="가나">
+              <option value="스위스">
+              <option value="브라질">
+              <option value="스페인">
+<!-- 여기서는 옵션을 한 번 선택하면 바뀌지 않는다. 이유 확인하기. -->
+            </datalist><br>
+        여행 : <input type="text" list="trip" name="trip">
+            <datalist id="trip">
+              <option value="산">
+              <option value="바다">
+              <option value="도시">
+              <option value="해외">
+
+            </datalist><br>
+      <input type="submit" value="전송하기">
+    </form>
+    <h3>다양한 버튼</h3>
+    <form method="get">
+      검색 : <input type="text" name="search" size="30" value="">
+      <input type="button" name="button1" value="Q1">
+      <button type="button" name="button2">Q2</button><br><br>
+      submit 버튼 :
+      <input type="submit" name="button3" value="submit1">
+      <button type="submit" name="button4">submit2</button><br><br>
+      reset 버튼 :
+      <input type="reset" name="reset1" value="RESET1">
+      <button type="reset" name="reset2">RESET2</button>
+      이미지 :
+      <input type="image" name="image1" src="image/button.png">
+      <button type="button"><img src="image/button.png"></button><br><br>
+    </form>
+      <h3>Checkbox, Radio Button</h3>
+      <form method="get">
+
+        <!-- 라벨과 리벨 포 차이 알기 -->
+        짜장면
+          <input id="x" type="checkbox" name="food1" value="jjajang">
+          <label for="x"><img src="image/jajang.png">
+          </label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+        <label for="x">짬뽕</label>
+          <input id="x" type="checkbox" name="food2" value="jjambbong">
+          <img src="image/jjambbong.png">&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <label>탕수육
+          <input type="checkbox" name="food3" value="tangsuyuk" checked>
+          <img src="image/tangsuyuk.png"></label>
+
+          html
+          <input type="radio" name="web" value="html" checked>&nbsp;&nbsp;&nbsp;&nbsp;
+
+          CSS
+          <input type="radio" name="web" value="css">&nbsp;&nbsp;&nbsp;&nbsp;
+
+          JAVAScript
+          <input type="radio" name="web" value="javascript"><br><br>
+
+        <input type="submit" name="tfood" value="submit">
+      </form><br><br>
+      <hr>
+      <h3>콤보 박스 만들기</h3>
+      <h4>즐겨입는 옷 선택하기</h4>
+        <form method="get">
+          <select name="clothes" multiple>
+            <option value="청바지">청바지</option>
+            <option value="원피스">원피스</option>
+            <option value="운동복">운동복</option>
+            <option value="투피스">투피스</option>
+            <option value="잠옷">잠옷</option>
+
+          </select><br><br>
+          <select name="tag" >
+            <optgroup label="html">
+              <option>form-tag</option>
+              <option>a-tag</option>
+              <option>tabel-tag</option>
+              <option>ul-li-ol-li</option>
+            </optgroup>
+
+            <optgroup label="CSS">
+              <option>font-size</option>
+              <option>background-color</option>
+              <option>font-family</option>
+              <option>border</option>
+            </optgroup>
+
+          </select><br><br>
+          <input type="submit" value="submit">
+        </form><br><br>
+        <h3>폼 입력 그룹으로 묶기</h3>
+        <h4>회원정보를 입력하세요.</h4>
+          <fieldset>
+            <legend>회원정보</legend>
+            고객이름 : <input type="text" name="name" value="hong"><br>
+            전화번호 : <input type="tell" name="tel-lnum" value="010-1111-1111"><br>
+            홈페이지 : <input type="url" name="homrpage" value="http://"><br>
+            메일주소 : <input type="email" name="mail" value="id@host"><br>
+          </fieldset>
+            <small>문의// Mobile : 010-1234-1234</small><br><br>
+            <input type="submit" value="submit">
+            <hr>
+            <h3>File 선택하기</h3>
+            <form method="get">
+              <input type="file" name="file" value="">
+              <input type="submit" value="submit">
+
+            </form><br><br>
+            <hr>
+            <h3>시간 정보 입력</h3>
+            <form method="get">
+              month : <input type="month" namr="month" value=""><br>
+              week : <input type="week" name="week" value=""><br>
+              date : <input type="date" name="date" value=""><br>
+              time : <input type="time" name="time" value=""><br>
+              place : <input type="text" name="place" value="홍대입구"><br>
+              local : <input type="datetime-local" name="party" value=""><br>
+              <!-- 데이트타임-로컬 많이 쓴다. 한 번에 모든 값을 입력할 수 있다. -->
+
+              <input type="submit" va;ue="submit">
+            </form><br><br>
+            <hr>
+            <h3>홈 제어 시스템(숫자입력, 온도조절)</h3>
+            <form method="get">
+              지속시간(0.0 ~ 10.0시간) :
+              <input type="number" min="0.0" max="10.0" step="0.5" nmae="time" value="4"><br><br>
+
+              온도설정 : 10&deg;
+              <input type="range" min="10" max="45" name="temp" value="">50&deg;<br><br>
+
+              공부시간(0 ~ 15시간) :
+              <input type="number" min="0" max="15" name="study" step="1" value=""><br><br>
+              공부시간 : 1h
+              <input type="text" name="study-time" list="time1">15h
+
+              <datalist id="time1">
+                <!-- 리스트의 이름과 데이카리스트의 이름이 동일해아한다. -->
+
+                <option value="2">
+                <option value="4">
+                <option value="7">
+                <option value="10">
+                <option value="13">
+                <option value="15">
+                </option>
+              </datalist><br><br>
+              <input type="submit" value="submit">
+            </form><br><br>
+            <h3>color 선택</h3>
+            <form method="get">
+              <input type="color" name="color" value="#ff00ff"><br>
+              <!-- 컬러는 RGB 타입 -->
+              <input type="submit" value="submit">
+            </form>
+  </body>
+</html>

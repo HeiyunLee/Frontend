@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>나의 일상</title>
+  </head>
+  <body>
+    <h3>나의 일상</h3>
+    <hr>
+
+    <table border="1" align="center" width="500">
+      <caption><b style="color:red">나의 일상</b></caption>
+      <thead>
+        <tr>
+          <th bgcolor="ff985c">제목</th><th bgcolor="ff985c">내용</th>
+        </tr>
+      </thead>
+      <tbody align=center height=600>
+        <tr>
+          <td>좋아하는 색</td>
+          <td>
+            <input type="color" name="color" value="#0000ff"></td>
+        </tr>
+        <tr>
+          <td>즐겨 입는 옷</td>
+          <td>
+            <select multiple>
+              <option value="츄리닝">츄리닝</option>
+              <option value="원피스">원피스</option>
+              <option value="반바지">반바지</option>
+              <option value="투피스">투피스</option>
+              <option value="잠옷">잠옷</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>즐겨 읽는 책</td>
+          <td>
+            <input type="text" name="book" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>하루 공부 시간(1 ~ 5시간)</td>
+          <td>
+            1.0h<input type="number" name="study" list="time" min="1.0" max="5.0">5.0h
+          </td>
+        </tr>
+        <tr>
+          <td>수면시간(5 ~ 9시간)</td>
+          <td>
+            5.0<input type="range" min="5" max="9" list="sleep" step="0.5" name="sleep" value="6">9.0
+            <datalist id="sleep">
+              <option value="5"></option>
+              <option value="5.5" title="5"></option>
+              <option value="6"></option>
+              <option value="6.5"></option>
+              <option value="7"></option>
+              <option value="7.5"></option>
+              <option value="8"></option>
+              <option value="8.5"></option>
+              <option value="9"></option>
+            </datalist>
+          </td>
+        </tr>
+        <tr>
+          <td>자주 보는 영상</td>
+          <td>
+            <a target="_blank" href="https://www.youtube.com/watch?v=mwvvQqLaFyA">
+              JORDY
+              </a>
+          </td>
+        </tr>
+        <tr>
+          <td>즐겨 듣는 음악</td>
+          <td>음원파일 삽입</td>
+        </tr>
+
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2" bgcolor="ff985c" align="center">
+            <input type="submit" name="send" value="전송해 주세요.">
+
+          </td>
+        </tr>
+      </tfoot>
+
+    </table>
+  </body>
+</html>

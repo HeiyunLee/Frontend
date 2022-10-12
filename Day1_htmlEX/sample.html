@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>피자 주문하기</title>
+  </head>
+  <body>
+    <h3>피자 주문하기</h3>
+
+      <fieldset>
+        <legend>고객정보</legend>
+        <table border="1" align="center">
+          <tr>
+            <td>고객이름<br></td>
+            <td><input type="text" name="name" value="hong"></td>
+          </tr>
+          <tr>
+            <td>전화번호</td>
+            <td><input type="tell" name="tel-lnum" value="010-1111-1111"></td>
+          </tr>
+          <tr>
+            <td>메일주소</td>
+            <td><input type="email" name="mail" value="id@host"></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>피자 종류</legend>
+          <table border="1" align="center" style="border-collapse:collapse">
+            <tr align="center">
+              <td>
+                <label for="x">
+                  <input id="x" type="checkbox" name="food" value="PIZZA1">PIZZA1
+                </label>
+                </td>
+              <td>
+                <label for="y">
+                  <input id="y" type="checkbox" name="food" value="PIZZA2">PIZZA2
+                </label>
+              </td>
+              <td>
+                <label for="z">
+                  <input id="z" type="checkbox" name="food" value="PIZZA3">PIZZA3
+                </label>
+              </td>
+              <td>
+                <label for="a">
+                  <input id="a" type="checkbox" name="food" value="PIZZA4">PIZZA4
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="x">
+                  <img id="x" src="image/pizza1.jpg" width="200" valign="bottom">
+                </label>
+              </td>
+              <td>
+                <label for="y">
+                  <img id="y" src="image/pizza2.jpg" width="200" valign="bottom">
+                </label>
+              </td>
+              <td>
+                <label for="z">
+                  <img id="z" src="image/pizza3.jpg" width="200" valign="bottom">
+                </label>
+              </td>
+              <td>
+                <label for="a">
+                  <img id="a" src="image/pizza4.jpg" width="200" valign="bottom">
+                </label>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>피자 크기</legend>
+          <table border="1" style="border-collapse:collapse" align="center"  width="600">
+            <tr align="center">
+              <td><input type="radio" name="size" value="">Small</td>
+              <td><input type="radio" name="size" value="">Medium</td>
+              <td><input type="radio" name="size" value="">Large</td>
+              <td><input type="radio" name="size" value="">Super big</td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>피자 토핑 고르기</legend>
+          <table border="1" style="border-collapse:collapse" align="center"  width="600">
+            <tr align="center">
+              <td><input type="checkbox" name="topping" value="">베이컨</td>
+              <td><input type="checkbox" name="topping" value="">치즈</td>
+              <td><input type="checkbox" name="topping" value="">양파</td>
+              <td><input type="checkbox" name="topping" value="">버섯</td>
+              <td><input type="checkbox" name="topping" value="">새우</td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>추가 주문</legend>
+          <table border="1" style="border-collapse:collapse" align="center"  width="600">
+            <tr align="center">
+              <td><input type="checkbox" name="size" value="">코카콜라</td>
+              <td><input type="checkbox" name="size" value="">스프라이트</td>
+              <td><input type="checkbox" name="size" value="">환타</td>
+              <td><input type="checkbox" name="size" value="">감자튀김</td>
+              <td><input type="checkbox" name="size" value="">치즈추가</td>
+            </tr>
+          </table>
+        </fieldset>
+        <fieldset>
+          <legend>원하는 배달 시간</legend>
+          <table border="1" style="border-collapse:collapse" align="center" width="300">
+            <tr align="center">
+              <td>
+                <input type="time" name="time" value="">
+              </td>
+            </tr>
+          </table>
+
+        </fieldset>
+        <fieldset>
+          <legend>배달 요구 사항</legend>
+          <table border="1" align="center">
+            <tr>
+              <td>
+                <textarea rows="10" cols="50" name="request" style="text-align:center">요청 사항
+                </textarea>
+              </td>
+            </tr>
+          </table>
+        </fieldset>
+        <br><br>
+        <center>
+      <input type="submit" value="피자 주문하기"></center>
+  </body>
+</html>
